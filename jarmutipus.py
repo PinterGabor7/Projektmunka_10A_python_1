@@ -44,11 +44,11 @@ def tipus():
                     adatok [0] = tipus
                     adatok [1] = utasok
                 case 7:
-                    tipus = 'Rabszállító Busz'
+                    tipus = 'Távolsági Busz'
                     adatok [0] = tipus
                     adatok [1] = utasok
                 case 8:
-                    tipus = 'Turista Busz'
+                    tipus = 'Rabszállító Busz'
                     adatok [0] = tipus
                     adatok [1] = utasok
         case 4 :
@@ -56,11 +56,11 @@ def tipus():
             utasok = 1
             match tipus:
                 case 9:
-                    tipus = 'Bicikli'
+                    tipus = 'Gyalog'
                     adatok [0] = tipus
                     adatok [1] = utasok
                 case 10:
-                    tipus = 'Gyalog'
+                    tipus = 'Bicikli'
                     adatok [0] = tipus
                     adatok [1] = utasok
                 case 11:
