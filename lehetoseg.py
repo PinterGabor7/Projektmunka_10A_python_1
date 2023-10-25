@@ -7,8 +7,10 @@ def lehetosegek(tipus : int):
         print('\t1.: személyi')
         print('\t2.: táska átnézése')
         print('\t3.: zsebek átvizsgálása')
+        print('\t4.: Átengedem')
+        print('\t5.: Nem engedem át')
         valasztas = input('Választásom: ')
-        while valasztas != '1' and valasztas != '2' and valasztas != '3':
+        while valasztas != '1' and valasztas != '2' and valasztas != '3' and valasztas != '4' and valasztas != '5':
             valasztas = input('Választásom: ')
     else:
         print('\tPapírok : \n\t\t1.: személyi \n\t\t2.: jogsi \n\t\t3.: forgalmi')
@@ -44,5 +46,62 @@ def lehetosegek(tipus : int):
     return int(valasztas)
 
 
+def atenged(jo: bool, tipus: int, kerdes: int):
+    if not jo:
+        if tipus > 8:
+            match kerdes:
+                case 1:
+                    print('Neve: Kala Pál\nAnyja neve: Kala Júlia\nSzületési dátum: 2003.02.29\nSzületési hely: Pápa')
+                case 2:
+                    print('Táska tartalma: telefon, szendvics, pénztárca, kulacs, rugós kés')
+                case 3:
+                    print('Jobb zseb: telefon\nBal zseb: pénztárca, fülhallgató, egy tasak kábítószer')
+        else:
+            match kerdes:
+                case 1:
+                    print('Neve: Kalim Pál\tAnyja neve: Kalim Katalin\tSzületési dátum: 2003.03.03\nSzületési hely: Misoklc')
+                case 2:
+                    print('A1-es jogosítvány: nincs\nB1-es jogosítvány: van\n\tMegszerzési dátum: 2023.12.12')
+                case 3:
+                    print('Autó márkája: Tesla\nB kategóriájú jogosítvány megszerzése: 2020.10.10\nÜzemanyag: Benzin\nEurotax kód: GBD4327')
+                case 4:
+                    print('Csomagtartó tartalma: bőrönd, roller, teniszütő, pisztoly')
+                case 5:
+                    match tipus:
+                        case 1:
+                            print('A jobb igen, de a bal sajnos nem')
+                        case 2:
+                            print('Nincs, csak egy cipőt, egy aranygyűrűt és egy biciklit vettünk')
+                        case 3:
+                            print('Biciklikerekeket rögzítek a Volvo-nál')
+                        case 4:
+                            print('Cigarettát és marihuánát Hollandiából')
+                        case 5:
+                            print('Az Audiból telefont')
+                        case 6:
+                            print('A győri Princeton-ból')
+                        case 7:
+                            print('A Kékesre, Ausztriába')
+                        case 8:
+                            print('')
+                        case 9:
+                            print('\t5.: Miért megy át a határon?')
+                        case 10:
+                            print('\t5.: Van önnél bukósisak?')
+                        case 11:
+                            print('\t5.: Jól működik a fék?')
 
+    else:
+        pass
+
+    print('\nLehetőségek: ')
+    print('\t1.: Átengedem')
+    print('\t2.: Nem engedem át')
+    print('\t3.: Újabb kérdés')
+    valasztas = input('Választásom: ')
+    while valasztas != '1' and valasztas != '2' and valasztas != '3':
+        valasztas = input('Választásom: ')
+    return int(valasztas)
+
+atenged(False, 9, 1)
 
