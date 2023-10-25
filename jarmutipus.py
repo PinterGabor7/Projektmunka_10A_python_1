@@ -12,15 +12,15 @@ def tipus():
             utasok = randint(1,4)
             match tipus:
                 case 1:
-                    tipus = 'Tragacs'
+                    tipus = 1
                     adatok [0] = tipus
                     adatok [1] = utasok
                 case 2:
-                    tipus = 'Családi autó'
+                    tipus = 2
                     adatok [0] = tipus
                     adatok [1] = utasok
                 case 3:
-                    tipus = 'Limuzin'
+                    tipus = 3
                     adatok [0] = tipus
                     adatok [1] = utasok
         case 2 :
@@ -28,11 +28,11 @@ def tipus():
             utasok = 1
             match tipus:
                 case 4:
-                    tipus = 'Furgon'
+                    tipus = 4
                     adatok [0] = tipus
                     adatok [1] = utasok
                 case 5:
-                    tipus = 'Kamion'
+                    tipus = 5
                     adatok [0] = tipus
                     adatok [1] = utasok
         case 3 :
@@ -40,15 +40,15 @@ def tipus():
             utasok = randint(1, 30)
             match tipus:
                 case 6:
-                    tipus = 'Iskolai Busz'
+                    tipus = 6
                     adatok [0] = tipus
                     adatok [1] = utasok
                 case 7:
-                    tipus = 'Távolsági Busz'
+                    tipus = 7
                     adatok [0] = tipus
                     adatok [1] = utasok
                 case 8:
-                    tipus = 'Rabszállító Busz'
+                    tipus = 8
                     adatok [0] = tipus
                     adatok [1] = utasok
         case 4 :
@@ -56,21 +56,23 @@ def tipus():
             utasok = 1
             match tipus:
                 case 9:
-                    tipus = 'Gyalog'
+                    tipus = 9
                     adatok [0] = tipus
                     adatok [1] = utasok
                 case 10:
-                    tipus = 'Bicikli'
+                    tipus = 10
                     adatok [0] = tipus
                     adatok [1] = utasok
                 case 11:
-                    tipus = 'Roller'
+                    tipus = 11
                     adatok [0] = tipus
                     adatok [1] = utasok
 
-
-
     return adatok
+
+adat = tipus()
+
+    
 
 
 
