@@ -5,7 +5,7 @@ def auto_lehetosegek(tipus : int):
     print('A lehetőségek: ')
     print('\tPapírok : \n\t\t1.: személyi \n\t\t2.: jogsi \n\t\t3.: forgalmi')
     print('\t4.: Csomagtartó megnézése')
-    match tipus:
+    match tipus:        # az autó típusa alapján plusz kérdés
         case 1:
             print('\t5.: Működik a fényszóró?')
         case 2:
