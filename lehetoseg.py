@@ -37,4 +37,3 @@ def auto_lehetosegek(tipus : int):
         
 
 
-auto_lehetosegek()
