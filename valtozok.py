@@ -1,5 +1,8 @@
-global penz
-global eletkedv
-global teljesitmeny
-global tapasztalatpont
-global ido
+penz = 20
+eletkedv = 100
+teljesitmeny = 50
+tapasztalatpont = 0
+kereset = 5
+ido = 480
+tipusa = 0
+utasszam = 0

@@ -1,4 +1,5 @@
 from random import randint
+from valtozok import *
 import os
 
 def lehetosegek(tipus : int):
@@ -69,30 +70,71 @@ def atenged(jo: bool, tipus: int, kerdes: int):
                 case 5:
                     match tipus:
                         case 1:
-                            print('A jobb igen, de a bal sajnos nem')
+                            print('A jobb igen, de a bal sajnos nem.')
                         case 2:
-                            print('Nincs, csak egy cipőt, egy aranygyűrűt és egy biciklit vettünk')
+                            print('Nincs, csak egy cipőt, egy aranygyűrűt és egy biciklit vettünk.')
                         case 3:
-                            print('Biciklikerekeket rögzítek a Volvo-nál')
+                            print('Biciklikerekeket szerelek a Volvo-nál.')
                         case 4:
-                            print('Cigarettát és marihuánát Hollandiából')
+                            print('Cigarettát és marihuánát Hollandiából.')
                         case 5:
-                            print('Az Audiból telefont')
+                            print('Az Audiból telefont.')
                         case 6:
-                            print('A győri Princeton-ból')
+                            print('A győri Princeton-ból.')
                         case 7:
-                            print('A Kékesre, Ausztriába')
+                            print('A Kékesre, Ausztriába.')
                         case 8:
-                            print('')
+                            print('A tatabányai börtönből.')
                         case 9:
-                            print('\t5.: Miért megy át a határon?')
+                            print('Mert köröznek, de csak kisértékű lopásért.')
                         case 10:
-                            print('\t5.: Van önnél bukósisak?')
+                            print('Nincs, kellene?')
                         case 11:
-                            print('\t5.: Jól működik a fék?')
+                            print('Egyáltalán nem, de a cipőtalpam jól tapad.')
 
     else:
-        pass
+        if tipus > 8:
+            match kerdes:
+                case 1:
+                    print('Neve: Rúgka Pál\nAnyja neve: Rúgka Borbála\nSzületési dátum: 1998.04.04.\nSzületési hely: Tatabánya')
+                case 2:
+                    print('Táska tartalma: telefon, szendvics, pénztárca, kulacs, rágó')
+                case 3:
+                    print('Jobb zseb: telefon\nBal zseb: pénztárca, fülhallgató')
+        else:
+            match kerdes:
+                case 1:
+                    print('Neve: Szlo Pál\tAnyja neve: Szlo Anett\tSzületési dátum: 2003.03.03\nSzületési hely: Budapest')
+                case 2:
+                    print('A1-es jogosítvány: nincs\nB1-es jogosítvány: van\n\tMegszerzési dátum: 2023.09.09.')
+                case 3:
+                    print('Autó márkája: Mazda\nB kategóriájú jogosítvány megszerzése: 2020.10.10\nÜzemanyag: Benzin\nEurotax kód: GBD4327')
+                case 4:
+                    print('Csomagtartó tartalma: bőrönd, roller, teniszütő')
+                case 5:
+                    match tipus:
+                        case 1:
+                            print('Igen, ha szeretné fel is kapcsolom.')
+                        case 2:
+                            print('Nincs, nem vettünk semmit.')
+                        case 3:
+                            print('Kerekeket rögzítek a Volvo-nál')
+                        case 4:
+                            print('Különböző halakat: lazacot, pisztrángot és sügért.')
+                        case 5:
+                            print('Az Audiból, Győrből.')
+                        case 6:
+                            print('A Győri SZC Jedlik Ányos Gépipari és Informatikai Technikum és Kollégiumból')
+                        case 7:
+                            print('Ausztriába a hegyekbe.')
+                        case 8:
+                            print('A győri börtönből.')
+                        case 9:
+                            print('Hogy meglátogassam a bácsikámat, itt él a határ mellett.')
+                        case 10:
+                            print('Igen, csak az ellenőrzéshez levettem.')
+                        case 11:
+                            print('Persze, nyugodtan megvizsgálhatja.')
 
     print('\nLehetőségek: ')
     print('\t1.: Átengedem')
@@ -103,5 +145,4 @@ def atenged(jo: bool, tipus: int, kerdes: int):
         valasztas = input('Választásom: ')
     return int(valasztas)
 
-atenged(False, 9, 1)
 
