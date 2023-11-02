@@ -24,7 +24,10 @@ while penz < 500:
             rangneve = 'Profi'
         elif   tapasztalatpont>= 64:
             rangneve = 'Veterán'
-
+        if jol_atengedett + rosszul_atengedett > 0:
+            teljesitmeny = jol_atengedett / (jol_atengedett + rosszul_atengedett)*100 - (jol_atengedett / (jol_atengedett + rosszul_atengedett))%0.01
+        else:
+            teljesitmeny = 100
         print(f'\t\t\t\tstats: \tpénz={penz}Bitcoin\t\t\t idő={int((ido-ido%60)/60)} óra {ido%60} perc \n \t\t\t\t\t életkedv={eletkedv} \t teljesítmény= {teljesitmeny}% \trang = {rangneve}')
 
         adatok = tipus()
@@ -70,8 +73,10 @@ while penz < 500:
         if (tipusa > 8 and (valasztas_1 == 5 or valasztas_1 == 6)) or (tipusa <= 8 and (valasztas_1 == 6 or valasztas_1 == 7)):
             if (tipusa > 8 and valasztas_1 == 5 and jo_ember) or (tipusa >= 8 and valasztas_1 == 6 and not jo_ember) or (tipusa <= 8 and valasztas_1 == 6 and jo_ember) or (tipusa < 8 and valasztas_1 == 7 and not jo_ember):
                 kereset += 1
+                jol_atengedett += 1
             else:
-                kereset -= 1
+                kereset = max(0, kereset-1)
+                rosszul_atengedett += 1
         else:
             valasztas_2 = atenged(jo_ember, tipusa, valasztas_1)
             while valasztas_2 == 3:
@@ -84,12 +89,14 @@ while penz < 500:
             if valasztas_2 == 3:
                 if (tipusa > 8 and valasztas_1 == 5 and jo_ember) or (tipusa > 8 and valasztas_1 == 5 and not jo_ember) or (tipusa <= 8 and valasztas_1 == 6 and jo_ember) or (tipusa <= 8 and valasztas_1 == 7 and not jo_ember):
                     kereset += 1
+                    jol_atengedett += 1
                 else:
-                    kereset -= 1
+                    kereset = max(0, kereset-1)
+                    rosszul_atengedett += 1
             else:
                 if (valasztas_2 == 1 and jo_ember) or (valasztas_2 == 2 and not jo_ember):
                     kereset += 1
                 else:
-                    kereset -= 1
+                    kereset = max(0, kereset-1)
 
 

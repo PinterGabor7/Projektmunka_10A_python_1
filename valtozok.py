@@ -6,3 +6,5 @@ kereset = 5
 ido = 480
 tipusa = 0
 utasszam = 0
+jol_atengedett = 0
+rosszul_atengedett = 0
