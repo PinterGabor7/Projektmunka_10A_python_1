@@ -28,7 +28,9 @@ while penz < 500:
             teljesitmeny = jol_atengedett / (jol_atengedett + rosszul_atengedett)*100 - (jol_atengedett / (jol_atengedett + rosszul_atengedett))%0.01
         else:
             teljesitmeny = 100
-        print(f'\t\t\t\tstats: \tpénz={penz}Bitcoin\t\t\t idő={int((ido-ido%60)/60)} óra {ido%60} perc \n \t\t\t\t\t életkedv={eletkedv} \t teljesítmény= {teljesitmeny}% \trang = {rangneve}')
+        print('-----------------------------------------------------------------------------------------------------')
+        print(f'  pénz={penz}Bitcoin\t   idő={int((ido-ido%60)/60)} óra {ido%60} perc\téletkedv={eletkedv}\tteljesítmény= {teljesitmeny:.2f}%\trang = {rangneve}')
+        print('-----------------------------------------------------------------------------------------------------\n')
 
         adatok = tipus()
         tipusa = adatok[0]
