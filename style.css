@@ -43,3 +43,23 @@
     padding: 9px 0px;
     margin-top: 15px ;
 }
+.kepkeret{
+    width: 150px;
+    float: right;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 30px;
+    overflow: hidden;
+   background-color: black;
+  font-weight: bold ;
+  color: white;
+  font-style: italic;
+}  
+#kep{
+    float: right;
+    max-width:150px ;
+    }
+.tartalom{
+    float:left;
+
+}
