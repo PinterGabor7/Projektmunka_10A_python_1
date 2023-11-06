@@ -1,25 +1,27 @@
 .navbar{
     background-color: black;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
-    margin: 0% 5%;
-    border-radius: 0.3cm;
     border: 5px solid black ;
-    margin-top: 5px;
 }
-.sajátoldal{
+.sajatoldal{
     color: white;
     text-decoration: underline;
-    font-size: 30px;
+    font-size: 20px;
     position:relative;
 }
 .masoldal{
     color: white;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 20px;
     position:relative;
 }
 .hatter{
     background-color: white;
+}
+.navbar div{
+    margin-left:auto;
+    margin-right: auto;
+
 }
