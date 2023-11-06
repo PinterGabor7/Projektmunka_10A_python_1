@@ -1,27 +1,27 @@
 .navbar{
-    background-color: black;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    background-color: rgb(50, 50, 50);
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
-    margin: 0% 5%;
-    border-radius: 0.3cm;
+    margin: 0% 0%;
+    border-radius: 0.0cm;
     border: 0px solid black ;
-    margin-top: 5px;
+    margin-top: 0px;
 }
-.sajátoldal{
+.sajatoldal{
     color: white;
     text-decoration: underline;
-    font-size: 30px;
+    font-size: 20px;
     position:relative;
 }
 .masoldal{
     color: white;
     text-decoration:none;
-    font-size: 30px;
+    font-size: 20px;
     position:relative;
 }
 .hatter{
-    background-color: white ;
+    background-color: white;
 }
 .szoveg{
     background-color: white;
@@ -58,4 +58,7 @@ h1{
 font-weight: bolder;
 text-decoration: underline;
 margin-left: 5px;
+}
+.logo{
+    max-height: 30px;
 }
