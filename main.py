@@ -25,7 +25,7 @@ while penz < 500:
         elif   tapasztalatpont>= 64:
             rangneve = 'Veterán'
         if jol_atengedett + rosszul_atengedett > 0:
-            teljesitmeny = jol_atengedett / (jol_atengedett + rosszul_atengedett)*100 - (jol_atengedett / (jol_atengedett + rosszul_atengedett))%0.01
+            teljesitmeny = jol_atengedett / (jol_atengedett + rosszul_atengedett)*100
         else:
             teljesitmeny = 100
         print('---------------------------------------------------------------------------------------------------------')
@@ -98,7 +98,9 @@ while penz < 500:
             else:
                 if (valasztas_2 == 1 and jo_ember) or (valasztas_2 == 2 and not jo_ember):
                     kereset += 1
+                    jol_atengedett += 1
                 else:
                     kereset = max(0, kereset-1)
+                    rosszul_atengedett += 1
 
 
