@@ -4,18 +4,23 @@ from lehetoseg import *
 from valtozok import *
 
 
-
 def statok():
+    global kereset
+    rangneve = ''
     if  tapasztalatpont<= 10:
         rangneve = 'Újonc'
     elif   tapasztalatpont>= 10 and tapasztalatpont<= 24:
         rangneve = 'Kezdő'
+        kereset = 10
     elif   tapasztalatpont>= 25 and tapasztalatpont<= 44:
         rangneve = 'Haladó'
+        kereset = 15
     elif   tapasztalatpont>= 45 and tapasztalatpont<= 63:
         rangneve = 'Profi'
+        kereset = 20
     elif   tapasztalatpont>= 64:
         rangneve = 'Veterán'
+        kereset = 25
     if jol_atengedett + rosszul_atengedett > 0:
         teljesitmeny = jol_atengedett / (jol_atengedett + rosszul_atengedett)*100
     else:
@@ -35,7 +40,6 @@ while penz < 200:
         os.system('cls')
         statok()
         tapasztalatpont += 1
-        rangneve = ''
         adatok = tipus()
         tipusa = adatok[0]
         utasszam = adatok[1]
@@ -78,15 +82,14 @@ while penz < 200:
         valasztas_1 = lehetosegek(tipusa)
         if (tipusa > 8 and (valasztas_1 == 5 or valasztas_1 == 6)) or (tipusa <= 8 and (valasztas_1 == 6 or valasztas_1 == 7)):
             if (tipusa > 8 and valasztas_1 == 5 and jo_ember) or (tipusa >= 8 and valasztas_1 == 6 and not jo_ember) or (tipusa <= 8 and valasztas_1 == 6 and jo_ember) or (tipusa < 8 and valasztas_1 == 7 and not jo_ember):
-                kereset += 1
                 jol_atengedett += 1
             else:
-                kereset = max(0, kereset-1)
                 rosszul_atengedett += 1
         else:
             valasztas_2 = atenged(jo_ember, tipusa, valasztas_1)
             while valasztas_2 == 3:
                 os.system('cls')
+                statok()
                 ido += 10
                 valasztas_1 = lehetosegek(tipusa)
                 if (tipusa > 8 and (valasztas_1 == 5 or valasztas_1 == 6)) or (tipusa <= 8 and (valasztas_1 == 6 or valasztas_1 == 7)):
@@ -94,17 +97,13 @@ while penz < 200:
                 valasztas_2 = atenged(jo_ember, tipusa, valasztas_1)
             if valasztas_2 == 3:
                 if (tipusa > 8 and valasztas_1 == 5 and jo_ember) or (tipusa > 8 and valasztas_1 == 5 and not jo_ember) or (tipusa <= 8 and valasztas_1 == 6 and jo_ember) or (tipusa <= 8 and valasztas_1 == 7 and not jo_ember):
-                    kereset += 1
                     jol_atengedett += 1
                 else:
-                    kereset = max(0, kereset-1)
                     rosszul_atengedett += 1
             else:
                 if (valasztas_2 == 1 and jo_ember) or (valasztas_2 == 2 and not jo_ember):
-                    kereset += 1
                     jol_atengedett += 1
                 else:
-                    kereset = max(0, kereset-1)
                     rosszul_atengedett += 1
 
 
