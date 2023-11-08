@@ -6,6 +6,7 @@ from valtozok import *
 
 def statok():
     global kereset
+    global teljesitmeny
     rangneve = ''
     if  tapasztalatpont<= 10:
         rangneve = 'Újonc'
@@ -111,6 +112,6 @@ while penz < 200:
                 else:
                     rosszul_atengedett += 1
 
-print(f'{teljesitmeny}%-ban engedted át helyesen az emberekte.')
+print(f'{teljesitmeny:.2f}%-ban engedted át helyesen az emberekte.')
 print(f'{jol_atengedett} embert engedtél jól át.')
 print(f'')
