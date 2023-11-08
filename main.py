@@ -38,10 +38,10 @@ def statok():
 while penz < 200:
     os.system('cls')
     ido = 480
-    penz -= 11
+    penz -= 6
     penz += kereset
 
-    while ido < 1080:
+    while ido < 1080 and penz < 200:
         os.system('cls')
         statok()
         tapasztalatpont += 1
@@ -111,4 +111,6 @@ while penz < 200:
                 else:
                     rosszul_atengedett += 1
 
-
+print(f'{teljesitmeny}%-ban engedted át helyesen az emberekte.')
+print(f'{jol_atengedett} embert engedtél jól át.')
+print(f'')
