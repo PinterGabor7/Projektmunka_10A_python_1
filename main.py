@@ -25,18 +25,23 @@ def statok():
         teljesitmeny = jol_atengedett / (jol_atengedett + rosszul_atengedett)*100
     else:
         teljesitmeny = 100
-    print('---------------------------------------------------------------------------------------------------------')
-    print(f'  pénz={penz}Euro      idő={int((ido-ido%60)/60)} óra {ido%60} perc      életkedv={eletkedv}       teljesítmény= {teljesitmeny:.2f}%      rang = {rangneve}')
-    print('---------------------------------------------------------------------------------------------------------\n')
-
+    
+    if ido%60 < 10:    
+        print('--------------------------------------------------------------------------------------------------')
+        print(f'  pénz = {penz}€      idő: {int((ido-ido%60)/60)}:0{ido%60}      kereset = {kereset}       teljesítmény = {teljesitmeny:.2f}%      rang: {rangneve}')
+        print('--------------------------------------------------------------------------------------------------\n')
+    else:
+        print('--------------------------------------------------------------------------------------------------')
+        print(f'  pénz = {penz}€      idő: {int((ido-ido%60)/60)}:{ido%60}      kereset = {kereset}       teljesítmény = {teljesitmeny:.2f}%      rang: {rangneve}')
+        print('--------------------------------------------------------------------------------------------------\n')
 
 while penz < 200:
     os.system('cls')
     ido = 480
-    penz -= 5
+    penz -= 6
     penz += kereset
 
-    while ido < 1080:
+    while ido < 1080 and penz < 200:
         os.system('cls')
         statok()
         tapasztalatpont += 1
@@ -106,4 +111,6 @@ while penz < 200:
                 else:
                     rosszul_atengedett += 1
 
-
+print(f'{teljesitmeny}%-ban engedted át helyesen az emberekte.')
+print(f'{jol_atengedett} embert engedtél jól át.')
+print(f'')
