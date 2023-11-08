@@ -3,26 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feltehető kérdések</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="jarmuvek.css">
-    <link rel="stylesheet" href="statok.css">
+    <title>főoldal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="html_kepek/Logo.png">
 </head>
 <body class="hatter">
     <div class="navbar ">
-        <a href="index.html" class="masoldal col-12 col-sm-12 col-md-3">Bemutató</a> 
-        <a href="kerdesek.html"class="sajátoldal col-12 col-sm-12 col-md-3">Kérdések</a>
-        <a href="autotipusok.html" class="masoldal col-12 col-sm-12 col-md-3">Autók típusai</a>
-    </div> 
-    <div class="row justify-content-center">
-        <div class="szoveg col-12 col-sm-12 col-md-9">
-            <h1>A játékban levő statok:</h1>
-            <p>Pénz</p>
-            <p>Teljesítmény</p>
-            <p>Idő</p>
-            <p>Rang</p>
+        <img src="html_kepek/Logo.png" class="logo justify-content-start" alt="határőrlogó">
+        <a href="index.html" class="masoldal col-12 col-sm-12 col-md-3 col-lg-2 justify-content-center">Bemutató</a> 
+        <a href="statok.html"class="sajatoldal col-12 col-sm-12 col-md-3 col-lg-2 justify-content-center">Statok</a>
+        <a href="jarmuvek.html" class="masoldal col-12 col-sm-12 col-md-3 col-lg-2 justify-content-center">Járművek</a>
+    </div>
+    <div class="container mt-3 col-12 col-md-12 col-sm-12 col-lg-12">
+      <h1>A játékban levő statok:</h1>
+      <div class="accordion" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                <strong>Pénz</strong>
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <img src="html_kepek/euro_kep.jpg" alt="Penz-kep" title="Pénz" class="statkep ">
+                <p class="statszoveg">
+                  A játékban az egyik főbb stat a pénzed. Ha összegyűjtesz 200 Eurót vagy annál többet akkor lesz vége a játéknak, mivel célod az az hogy minél előbb fel tudj mondani a munkádba, de ahhoz kell egy bizonyos összeg, hogy amég újat keresel addig el tudjad magadat tartani.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                <strong>Idő</strong>
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                <strong>Teljesítmény</strong>
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                <strong>Rang</strong>
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+            </div>
+          </div>
         </div>
-    </div> 
+      </div>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>  
 </body>
 </html>

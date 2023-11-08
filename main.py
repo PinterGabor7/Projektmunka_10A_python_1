@@ -3,7 +3,29 @@ from jarmutipus import *
 from lehetoseg import *
 from valtozok import *
 
-while penz < 500:
+
+
+def statok():
+    if  tapasztalatpont<= 10:
+        rangneve = 'Újonc'
+    elif   tapasztalatpont>= 10 and tapasztalatpont<= 24:
+        rangneve = 'Kezdő'
+    elif   tapasztalatpont>= 25 and tapasztalatpont<= 44:
+        rangneve = 'Haladó'
+    elif   tapasztalatpont>= 45 and tapasztalatpont<= 63:
+        rangneve = 'Profi'
+    elif   tapasztalatpont>= 64:
+        rangneve = 'Veterán'
+    if jol_atengedett + rosszul_atengedett > 0:
+        teljesitmeny = jol_atengedett / (jol_atengedett + rosszul_atengedett)*100
+    else:
+        teljesitmeny = 100
+    print('---------------------------------------------------------------------------------------------------------')
+    print(f'  pénz={penz}Euro      idő={int((ido-ido%60)/60)} óra {ido%60} perc      életkedv={eletkedv}       teljesítmény= {teljesitmeny:.2f}%      rang = {rangneve}')
+    print('---------------------------------------------------------------------------------------------------------\n')
+
+
+while penz < 200:
     os.system('cls')
     ido = 480
     penz -= 5
@@ -11,27 +33,9 @@ while penz < 500:
 
     while ido < 1080:
         os.system('cls')
+        statok()
         tapasztalatpont += 1
         rangneve = ''
-
-        if  tapasztalatpont<= 10:
-            rangneve = 'Újonc'
-        elif   tapasztalatpont>= 10 and tapasztalatpont<= 24:
-            rangneve = 'Kezdő'
-        elif   tapasztalatpont>= 25 and tapasztalatpont<= 44:
-            rangneve = 'Haladó'
-        elif   tapasztalatpont>= 45 and tapasztalatpont<= 63:
-            rangneve = 'Profi'
-        elif   tapasztalatpont>= 64:
-            rangneve = 'Veterán'
-        if jol_atengedett + rosszul_atengedett > 0:
-            teljesitmeny = jol_atengedett / (jol_atengedett + rosszul_atengedett)*100
-        else:
-            teljesitmeny = 100
-        print('---------------------------------------------------------------------------------------------------------')
-        print(f'  pénz={penz}Bitcoin      idő={int((ido-ido%60)/60)} óra {ido%60} perc      életkedv={eletkedv}       teljesítmény= {teljesitmeny:.2f}%      rang = {rangneve}')
-        print('---------------------------------------------------------------------------------------------------------\n')
-
         adatok = tipus()
         tipusa = adatok[0]
         utasszam = adatok[1]

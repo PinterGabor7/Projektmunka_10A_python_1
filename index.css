@@ -37,10 +37,10 @@
     margin-right: 10px;
     border-radius: 10px;
     overflow: hidden;
-   background-color: black;
-  font-weight: bold ;
-  color: white;
-  font-style: italic; 
+    background-color: black;
+    font-weight: bold ;
+    color: white;
+    font-style: italic; 
 }  
 #kep{
     float: right;
@@ -55,10 +55,34 @@
 }
 h1{
     font-size: 40px;
-font-weight: bolder;
-text-decoration: underline;
-margin-left: 5px;
+    font-weight: bolder;
+    text-decoration: underline;
+    margin-left: 5px;
 }
 .logo{
     max-height: 30px;
+}
+
+.stat{
+    font-size: 20px;
+}
+
+.accordion-item{
+    border: none;
+    margin-right: 210px;
+    margin-left: 10px;
+}
+
+.accordion-button{
+    padding-right: 50px;
+}
+
+.statkep{
+    float: left;
+    max-width: 120px;
+    padding-right: 10px;
+}
+
+.statszoveg{
+    padding-left: 50px;
 }
