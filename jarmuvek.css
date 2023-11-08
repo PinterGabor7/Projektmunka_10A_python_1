@@ -1,9 +1,12 @@
 .navbar{
-    background-color: black;
+    background-color: rgb(50, 50, 50);
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
-    border: 5px solid black ;
+    margin: 0% 0%;
+    border-radius: 0.0cm;
+    border: 0px solid black ;
+    margin-top: 0px;
 }
 .sajatoldal{
     color: white;
@@ -13,15 +16,79 @@
 }
 .masoldal{
     color: white;
-    text-decoration: none;
+    text-decoration:none;
     font-size: 20px;
     position:relative;
 }
 .hatter{
     background-color: white;
 }
-.navbar div{
-    margin-left:auto;
-    margin-right: auto;
+.szoveg{
+    background-color: white;
+    border-radius: 0.3cm;
+    border: 5px solid black ;
+    padding: 9px 0px;
+    margin-top: 15px ;
+}
+.kepkeret{
+    width: 150px;
+    float: right;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: black;
+    font-weight: bold ;
+    color: white;
+    font-style: italic; 
+}  
+#kep{
+    float: right;
+    max-width:150px ;
+}
+.tartalom{
+    float:left;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    margin-left: 5px;
+}
+h1{
+    font-size: 40px;
+    font-weight: bolder;
+    text-decoration: underline;
+    margin-left: 5px;
+}
+.logo{
+    max-height: 30px;
+}
 
+.stat{
+    font-size: 20px;
+}
+
+.accordion-item{
+    border: none;
+    margin-right: 210px;
+    margin-left: 10px;
+}
+
+.accordion-button{
+    padding-right: 50px;
+}
+
+.statkep{
+    float: left;
+    max-width: 120px;
+    padding-right: 10px;
+}
+
+.statszoveg{
+    padding-left: 50px;
+}
+
+.szegeny_auto_kep{
+    float: left;
+    width: 110px;
+    height: 80px;
 }
