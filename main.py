@@ -40,7 +40,7 @@ def statok():
 bevezeto = bevezeto()
 print(f'{bevezeto}')
 
-while penz < 200:
+while penz < 150:
     os.system('cls')
     ido = 480
     penz -= 6
