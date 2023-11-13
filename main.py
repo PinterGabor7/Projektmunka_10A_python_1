@@ -1,7 +1,8 @@
-import random,os
+import random,os,sys
 from jarmutipus import *
 from lehetoseg import *
 from valtozok import *
+from bevezeto import *
 
 
 def statok():
@@ -36,11 +37,15 @@ def statok():
         print(f'  pénz = {penz}€      idő: {int((ido-ido%60)/60)}:{ido%60}      kereset = {kereset}       teljesítmény = {teljesitmeny:.2f}%      rang: {rangneve}')
         print('--------------------------------------------------------------------------------------------------\n')
 
+bevezeto = bevezeto()
+print(f'{bevezeto}')
+
 while penz < 200:
     os.system('cls')
     ido = 480
     penz -= 6
     penz += kereset
+    napok += 1
 
     while ido < 1080 and penz < 200:
         os.system('cls')
@@ -85,7 +90,10 @@ while penz < 200:
         
         ido += 30
 
+
         valasztas_1 = lehetosegek(tipusa)
+        if (tipusa > 8 and valasztas_1 == 7) or (tipusa <= 8 and valasztas_1 == 8):
+            sys.exit()
         if (tipusa > 8 and (valasztas_1 == 5 or valasztas_1 == 6)) or (tipusa <= 8 and (valasztas_1 == 6 or valasztas_1 == 7)):
             if (tipusa > 8 and valasztas_1 == 5 and jo_ember) or (tipusa >= 8 and valasztas_1 == 6 and not jo_ember) or (tipusa <= 8 and valasztas_1 == 6 and jo_ember) or (tipusa < 8 and valasztas_1 == 7 and not jo_ember):
                 jol_atengedett += 1
@@ -98,9 +106,13 @@ while penz < 200:
                 statok()
                 ido += 10
                 valasztas_1 = lehetosegek(tipusa)
+                if (tipusa > 8 and valasztas_1 == 7) or (tipusa <= 8 and valasztas_1 == 8):
+                    sys.exit()
                 if (tipusa > 8 and (valasztas_1 == 5 or valasztas_1 == 6)) or (tipusa <= 8 and (valasztas_1 == 6 or valasztas_1 == 7)):
                     break
                 valasztas_2 = atenged(jo_ember, tipusa, valasztas_1)
+            if valasztas_2 == 4:
+                sys.exit()
             if valasztas_2 == 3:
                 if (tipusa > 8 and valasztas_1 == 5 and jo_ember) or (tipusa > 8 and valasztas_1 == 5 and not jo_ember) or (tipusa <= 8 and valasztas_1 == 6 and jo_ember) or (tipusa <= 8 and valasztas_1 == 7 and not jo_ember):
                     jol_atengedett += 1
@@ -112,6 +124,8 @@ while penz < 200:
                 else:
                     rosszul_atengedett += 1
 
-print(f'{teljesitmeny:.2f}%-ban engedted át helyesen az emberekte.')
-print(f'{jol_atengedett} embert engedtél jól át.')
-print(f'')
+print(f'\n{teljesitmeny:.2f}%-ban engedted át helyesen az emberekte.')
+print(f'{jol_atengedett} jó embert engedtél át.')
+print(f'{rosszul_atengedett} rossz embert engdetél át.')
+print(f'{napok} játékbeli napba telt kivinned a játékot.\n')
+

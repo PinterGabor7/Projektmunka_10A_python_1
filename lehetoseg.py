@@ -17,8 +17,9 @@ def lehetosegek(tipus : int):
                 print('\t4.: Jól működik a fék?')
         print('\t5.: Átengedem')
         print('\t6.: Nem engedem át')
+        print('\t7.: Kilépés')
         valasztas = input('Választásom: ')
-        while valasztas != '1' and valasztas != '2' and valasztas != '3' and valasztas != '4' and valasztas != '5' and valasztas != '6':
+        while valasztas != '1' and valasztas != '2' and valasztas != '3' and valasztas != '4' and valasztas != '5' and valasztas != '6' and valasztas != '7':
             valasztas = input('Választásom: ')
     else:
         print('\tPapírok : \n\t\t1.: személyi \n\t\t2.: jogsi \n\t\t3.: forgalmi')
@@ -42,8 +43,9 @@ def lehetosegek(tipus : int):
                 print('\t5.: Honnan szállítják a rabokat?')
         print('\t6.: Átengedem')
         print('\t7.: Nem engedem át')
+        print('\t8.: Kilépés')
         valasztas = input('Választásom: ')
-        while valasztas != '1' and valasztas != '2' and valasztas != '3' and valasztas != '4' and valasztas != '5' and valasztas != '6' and valasztas != '7':
+        while valasztas != '1' and valasztas != '2' and valasztas != '3' and valasztas != '4' and valasztas != '5' and valasztas != '6' and valasztas != '7' and valasztas != '8':
             valasztas = input('Választásom: ')
     return int(valasztas)
 
@@ -147,8 +149,9 @@ def atenged(jo: bool, tipus: int, kerdes: int):
     print('\t1.: Átengedem')
     print('\t2.: Nem engedem át')
     print('\t3.: Újabb kérdés')
+    print('\t4.: Kilépés')
     valasztas = input('Választásom: ')
-    while valasztas != '1' and valasztas != '2' and valasztas != '3':
+    while valasztas != '1' and valasztas != '2' and valasztas != '3' and valasztas != '4':
         valasztas = input('Választásom: ')
     return int(valasztas)
 
