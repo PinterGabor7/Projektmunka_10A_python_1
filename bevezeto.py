@@ -1,0 +1,12 @@
+def bevezeto():
+    print('Játék működése:')
+    print('')
+    print('Egy határon dolgozó munkás vagy aki minél elöbb ott akarja hagyni munkáját.')
+    print('Munkád elhagyásához 150 eurót kell összeszedned, hogy amíg új munkát kersesel addig legyen egy kis pénz mögötted.')
+    print('Minden nap végén kapsz fizetést, és ez rangtól függően nőő.')
+    print('Napi költségeid is vannak, ez 5 euró.')
+    print('Rangot úgy tudsz lépni, hogy jó embereket átengeded a rosszakat pedig nem.')
+    print('Egy nap 10 órát dolgozol (reggel 8tól este 6ig).')
+    print('Minden egyes utazó 30 percedet veszi igénybe, és minden egyes kérdés amit felteszel +10 perced vesz még el.')
+    print('')
+    input('Nyomja meg az entert.')
