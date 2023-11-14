@@ -27,9 +27,10 @@
     border: 5px solid black ;
     padding: 8px 0px;
     margin-top: 15px ;
+    margin-bottom: 5%;
 }
 .kepkeret{
-    width: 300px;
+    width: 375px;
     float: right;
     text-align: center;
     margin-right: 10px;
@@ -39,11 +40,11 @@
     font-weight: bold ;
     color: white;
     font-style: italic; 
-    margin-bottom: 2%;
+    margin-bottom: 5%;
 }  
 #kep{
     float: right;
-    max-width:300px ;
+    max-width:375px ;
 }
 .tartalom{
     float:left;
@@ -108,7 +109,7 @@ h1{
 }
 .lista{
     text-align: center;
-    margin-top: 250px;
+    margin-top: 50px;
 }
 .kiemelt{
     font-weight: bold;
