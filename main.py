@@ -124,8 +124,8 @@ while penz < 150:
                 else:
                     rosszul_atengedett += 1
 
-print(f'\n{teljesitmeny:.2f}%-ban engedted át helyesen az emberekte.')
+print(f'\n{teljesitmeny:.2f}%-ban engedted át helyesen az embereket.')
 print(f'{jol_atengedett} jó embert engedtél át.')
-print(f'{rosszul_atengedett} rossz embert engdetél át.')
+print(f'{rosszul_atengedett} rossz embert engedtél át.')
 print(f'{napok} játékbeli napba telt kivinned a játékot.\n')
 
